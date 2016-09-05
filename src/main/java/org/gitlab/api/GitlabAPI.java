@@ -791,6 +791,7 @@ public class GitlabAPI {
      * @return the Gitlab Project
      * @throws IOException on gitlab api call error
      */
+    @Deprecated
     public GitlabProject createProject(String name, Integer namespaceId, String description, Boolean issuesEnabled, Boolean wallEnabled, Boolean mergeRequestsEnabled, Boolean wikiEnabled, Boolean snippetsEnabled, Boolean publik, Integer visibilityLevel, String importUrl) throws IOException {
         CreateProjectQuery createProjectQuery = new CreateProjectQuery()
                 .setName(name)
@@ -850,6 +851,7 @@ public class GitlabAPI {
      * @return The GitLab Project
      * @throws IOException on gitlab api call error
      */
+    @Deprecated
     public GitlabProject createUserProject(Integer userId, String name, String description, String defaultBranch, Boolean issuesEnabled, Boolean wallEnabled, Boolean mergeRequestsEnabled, Boolean wikiEnabled, Boolean snippetsEnabled, Boolean publik, Integer visibilityLevel, String importUrl) throws IOException {
         CreateProjectQuery createProjectQuery = new CreateProjectQuery()
                 .setName(name)
@@ -882,6 +884,7 @@ public class GitlabAPI {
      * @return the Gitlab Project
      * @throws IOException on gitlab api call error
      */
+    @Deprecated
     public GitlabProject updateProject(
             Integer projectId,
             String  name,
